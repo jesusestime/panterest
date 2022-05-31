@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family: "Filson Pro";
+    src: url("../fonts/FilsonProMedium.otf") format("truetype");
+
+  }
+
+
+html,body
+            {
+                font-family: 'Filson Pro','Montserrat', sans-serif;
+                background-color: #ffffff;
+                font-size: small;
+
+            }
+            .alert
+            {
+                padding: 10px;
+                text-align:center;
+                border : none;
+                border-radius : 0;
+            }
+
+
+
+#pin .form-group label
+{
+    @extend .my-2
+}
+
+#pin .form-group .col-form-label
+{
+    @extend .my-2 
+}
+
+#pin .form-group .form-check-label
+{
+    @extend .my-0
+}
+
+.vich-image img
+{
+    @extend .mb-2,.rounded,.shadow,.img-thumbnail;
+}
+
+.pin img
+{
+    transition: transform 0.3s ease-out;
+    &:hover
+    {
+        transform: scale(1.075);
+    }
+}
+.text-underline-hover {
+    text-decoration: none;
+}
+
+.text-underline-hover:hover {
+    text-decoration: underline;
+}
+
+
+.turbo-progress-bar {
+    background-color: #0dcaf0;
+  }
+
+
+
+
+
+
+
+
+

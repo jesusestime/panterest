@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html.twig' %}
+{% block title 'Error 404' %}
+{% block body %}
+   <div class="row my-5">
+   <div class="col-md-8 mx-auto my-5">
+   <h1>Oops! An Error Occurred</h1>
+   <h4 class="text-muted">The server returned a "404 Not Found"</h4>
+
+    <p class="mt-4">
+        The requested page couldn't be located. Checkout for any URL
+        misspelling or <a href="{{ path('app_home') }}">return to the homepage</a>.
+    </p>
+   </div>
+   </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends '/layouts/base.html.twig' %}
+
+{% block title 'Update Pin #'~ pin.id %}
+
+{% block body %}
+
+    <div class='row'>
+        <div class='col-lg-6 mx-auto'>
+            <h1>Update Pin</h1>
+            
+            {{ include('/pins/_form.html.twig',{submitbuttontext:'Update Pin'}) }}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layouts/base.html.twig" %}
+
+{% block title 'Profile' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-6 mx-auto text-center my-0">
+            <h1 class="h1 my-4">Profile</h1>
+
+            <img src="https://ui-avatars.com/api/?name={{app.user.firstName}}+{{app.user.lastName}}&size=128&rounded=true&bold=true" alt="{{app.user.fullName}}" class="shadow rounded-circle">
+            <h2 class="h2 my-2 mt-4">{{app.user.fullName}}</h2>
+            
+            <p class="lead text-muted h2 my-2 ">{{app.user.email}}</p>
+            <hr  class="mx-auto text-muted w-75">
+            <p><small class="">&#9200;Account created on {{app.user.createdAt|date('d/m/Y')}}</small></p>
+
+            <p><a href="{{ path('app_account_edit') }}">Edit account</a> | <a href="{{ path('app_account_change_password') }}">Change password</a></p>
+        </div>
+    </div>
+
+{% endblock %}

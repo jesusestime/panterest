@@ -1,0 +1,33 @@
+ <nav class="navbar navbar-expand-sm navbar-light bg-light " aria-label="Third navbar example">
+    <div class="container">
+      <a class="navbar-brand bold" href="{{ path('app_home') }}"><b class="h2">Panterest</b> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <ul class="navbar-nav ms-auto">
+         {% if app.user %}
+            <li class="nav-item">
+            <a class="nav-link {{ 'app_pins_create'|is_active}}"  href="{{ path('app_pins_create') }}">New Pin</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="{{ path('app_account') }}">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{{ path('app_logout', {'token' : csrf_token('logout')}) }}">Logout</a>
+            </li>
+         {% else %}
+            <li class="nav-item">
+            <a class="nav-link" href="{{ path('app_register') }}">Registrer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{ 'app_login'|is_active}}"  href="{{ path('app_login') }}">Login</a>
+            </li>
+         {% endif %}
+
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
