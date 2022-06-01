@@ -7,6 +7,7 @@
         "php": ">=8.0.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "ext-gd": "*",
         "beberlei/doctrineextensions": "^1.3",
         "bw/active-menu-item-bundle": "^1.1",
         "doctrine/annotations": "^1.13",
